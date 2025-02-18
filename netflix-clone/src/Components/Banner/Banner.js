@@ -13,11 +13,13 @@ const Banner = () => {
             } catch (error) {
                 console.log("error", error);
             }
-        })(); // Removed extra parenthesis here
-    }, []); // Added dependency array
-        function truncate(str, n) {
+        })();
+    }, []);
+    
+    function truncate(str, n) {
         return str?.length > n ? str.substr(0, n - 1) + "..." : str;
     }
+
     return (
         <div className='banner'
             style={{
@@ -27,13 +29,13 @@ const Banner = () => {
                 backgroundRepeat: "no-repeat"
             }}
         >
-            <div className='banner_content'>
+            <div className='banner_contents'>
                 <h1 className='banner_title'>{movie?.title || movie?.name || movie?.original_name}</h1>
                 <div className='banner_buttons'>
-                    <button className='banner_button'>Play</button>
-                    <button className='banner_button'>My List</button>
+                    <button className='banner_button play'>Play</button>
+                    <button className='banner_button list'>My List</button>
                 </div>
-                <h1 className='banner_description'>{truncate(movie?.overview,150)}</h1>
+                <h1 className='banner_description'>{truncate(movie?.overview, 150)}</h1>
             </div>
             <div className='banner_fadeBottom'></div>
         </div>

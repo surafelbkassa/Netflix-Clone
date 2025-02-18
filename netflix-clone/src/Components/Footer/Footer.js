@@ -9,9 +9,9 @@ const Footer = () => {
       <div className='footer_inner_container'>
         <div className='footer_icons'>
           <ul>
-            <li><FacebookOutlinedIcon /></li>
-            <li><InstagramIcon/></li>
-            <li><YouTubeIcon/></li>
+            <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><FacebookOutlinedIcon /></a></li>
+            <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><InstagramIcon/></a></li>
+            <li><a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><YouTubeIcon/></a></li>
           </ul>
         </div>
         <div className='footer_data'>
@@ -21,19 +21,21 @@ const Footer = () => {
             <li>Legal Notice</li>
           </ul>
         </div>
-        <div>
-          <li>Help Center</li>
-          <li>Jobs</li>
-          <li>Cookie preference</li>
+        <div className='footer_data'>
+          <ul>
+            <li>Help Center</li>
+            <li>Jobs</li>
+            <li>Cookie preference</li>
+          </ul>
         </div>
-        <div>
+        <div className='footer_data'>
           <ul>
             <li>Gift Cards</li>
             <li>Terms of Use</li>
             <li>Corporate Information</li>
           </ul>
         </div>
-        <div>
+        <div className='footer_data'>
           <ul>
             <li>Media Center</li>
             <li>Privacy</li>
@@ -47,8 +49,6 @@ const Footer = () => {
           &copy; 1997-2021 Netflix, Inc.
         </div>
       </div>
-      
-      
     </div>
   )
 }
